@@ -30,7 +30,7 @@ class Day1 {
     }
 
     public static void main(String[] args) throws IOException {
-        // part1();
+        part1();
         part2();
     }
 
@@ -42,7 +42,7 @@ class Day1 {
                     .findFirst().getAsInt() - '0';
             s += first + second;
         });
-        System.err.println("Part 1 answer: " + s);
+        System.out.println("Part 1 answer: " + s);
     }
 
     static void part2() throws IOException {
@@ -52,7 +52,7 @@ class Day1 {
             int[] values = firstIndex(line);
             s += values[0] + values[1];
         }
-        System.out.println(s);
+        System.out.println("Part 2 answer: " + s);
     }
 
     static int[] firstIndex(String string) {
