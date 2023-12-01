@@ -40,7 +40,7 @@ class Day1 {
             int first = line.chars().filter(c -> Character.isDigit(c)).findFirst().getAsInt() - '0';
             int second = new StringBuilder(line).reverse().toString().chars().filter(c -> Character.isDigit(c))
                     .findFirst().getAsInt() - '0';
-            s += first + second;
+            s += (first*10 + second);
         });
         System.out.println("Part 1 answer: " + s);
     }
@@ -50,7 +50,7 @@ class Day1 {
 
         for (String line : lines) {
             int[] values = firstIndex(line);
-            s += values[0] + values[1];
+            s += (values[0]*10 + values[1]);
         }
         System.out.println("Part 2 answer: " + s);
     }
