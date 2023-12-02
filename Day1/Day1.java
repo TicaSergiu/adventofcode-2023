@@ -30,7 +30,7 @@ class Day1 {
     }
 
     public static void main(String[] args) throws IOException {
-        // part1();
+        part1();
         part2();
     }
 
@@ -40,9 +40,9 @@ class Day1 {
             int first = line.chars().filter(c -> Character.isDigit(c)).findFirst().getAsInt() - '0';
             int second = new StringBuilder(line).reverse().toString().chars().filter(c -> Character.isDigit(c))
                     .findFirst().getAsInt() - '0';
-            s += first + second;
+            s += (first*10 + second);
         });
-        System.err.println("Part 1 answer: " + s);
+        System.out.println("Part 1 answer: " + s);
     }
 
     static void part2() throws IOException {
@@ -50,9 +50,9 @@ class Day1 {
 
         for (String line : lines) {
             int[] values = firstIndex(line);
-            s += values[0] + values[1];
+            s += (values[0]*10 + values[1]);
         }
-        System.out.println(s);
+        System.out.println("Part 2 answer: " + s);
     }
 
     static int[] firstIndex(String string) {
