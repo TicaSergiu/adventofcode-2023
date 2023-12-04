@@ -3,14 +3,12 @@ package Day3;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collector;
 
 public class Day3 {
     static final Map<String, Integer> map = new HashMap<>();
@@ -91,7 +89,6 @@ public class Day3 {
                     while (matcher.find()) {
                         nums.add(Integer.parseInt(matcher.group(0)));
                     }
-                    String next = lines.get(i + 1);
 
                     if (nums.size() == 2) {
                         result += nums.get(0) * nums.get(1);
