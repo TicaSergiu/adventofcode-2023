@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import Util.ReadFile;
+import Util.Utils;
 
 public class Day6 {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Day6 {
     }
 
     static void part1() {
-        List<String> line = ReadFile.readAllLines("Day6/input.txt");
+        List<String> line = Utils.readAllLines("Day6/input.txt");
 
         Pattern pattern = Pattern.compile("[\\d]{1,4}");
         Matcher matcherTimes = pattern.matcher(line.get(0));
@@ -46,7 +46,7 @@ public class Day6 {
     }
 
     private static void part2() {
-        List<String> line = ReadFile.readAllLines("Day6/input.txt");
+        List<String> line = Utils.readAllLines("Day6/input.txt");
 
         Pattern pattern = Pattern.compile("[\\d]+");
         Matcher matcherTimes = pattern.matcher(line.get(0).replaceAll("[\\s]", ""));

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Util.ReadFile;
+import Util.Utils;
 
 public class Day8 {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Day8 {
     }
 
     private static void part1() {
-        List<String> lines = ReadFile.readAllLinesAndRemoveEmpty("Day8/input.txt");
+        List<String> lines = Utils.readAllLinesAndRemoveEmpty("Day8/input.txt");
 
         char[] instructions = lines.get(0).toCharArray();
 
@@ -40,7 +40,7 @@ public class Day8 {
     }
 
     private static void part2() {
-        List<String> lines = ReadFile.readAllLinesAndRemoveEmpty("Day8/input.txt");
+        List<String> lines = Utils.readAllLinesAndRemoveEmpty("Day8/input.txt");
 
         char[] instructions = lines.get(0).toCharArray();
 

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Util.ReadFile;
+import Util.Utils;
 
 public class Part2 {
     public static class Hand {
@@ -108,7 +108,7 @@ public class Part2 {
     }
 
     private static void part1() {
-        List<String> lines = ReadFile.readAllLines("Day7/input.txt");
+        List<String> lines = Utils.readAllLines("Day7/input.txt");
 
         List<Hand> hands = new ArrayList<>();
         lines.forEach(line -> {

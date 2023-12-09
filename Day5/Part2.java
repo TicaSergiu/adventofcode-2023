@@ -1,6 +1,6 @@
 package Day5;
 
-import Util.ReadFile;
+import Util.Utils;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class Part2 {
     }
 
     public static void main(String[] args) {
-        List<String> lines = ReadFile.readAllLinesAndRemoveEmpty("Day5/input.txt");
+        List<String> lines = Utils.readAllLinesAndRemoveEmpty("Day5/input.txt");
 
         String[] strSeeds = lines.get(0)
                 .substring(lines.get(0)
