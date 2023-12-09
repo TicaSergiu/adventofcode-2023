@@ -98,32 +98,4 @@ public class Day3 {
         }
         System.out.println("Part 2 answer: " + result);
     }
-
-    private static Integer checkNumber(String line, int j) {
-        if (Character.isDigit(line.charAt(j)) && Character.isDigit(j + 1) && Character.isDigit(j + 2)) {
-            return Integer.parseInt(line.substring(j, j + 4));
-        }
-        if (Character.isDigit(line.charAt(j)) && Character.isDigit(j + 1)) {
-            return Integer.parseInt(line.substring(j, j + 3));
-        }
-        if (Character.isDigit(line.charAt(j))) {
-            return Integer.parseInt(line.substring(j, j + 2));
-        }
-        return 0;
-    }
-
-    private static Integer checkReverseNumber(String previousLine, int j) {
-        if (Character.isDigit(previousLine.charAt(j - 2)) && Character.isDigit(previousLine.charAt(j - 1))
-                && Character.isDigit(previousLine.charAt(j - 0))) {
-
-            return Integer.parseInt(previousLine.substring(j - 2, j - 0), 3);
-        }
-        if (Character.isDigit(previousLine.charAt(j - 1)) && Character.isDigit(previousLine.charAt(j - 0))) {
-            return Integer.parseInt(previousLine.substring(j - 2, j - 0), 2);
-        }
-        if (Character.isDigit(previousLine.charAt(j - 0))) {
-            return Integer.parseInt(previousLine.substring(j - 1, j - 0), 1);
-        }
-        return 0;
-    }
 }

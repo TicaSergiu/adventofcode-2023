@@ -2,10 +2,7 @@ package Day5;
 
 import Util.Utils;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class Part2 {
     static class Range {
